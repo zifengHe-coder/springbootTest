@@ -22,7 +22,7 @@ public class MyWebApplicationInitializer implements WebApplicationInitializer {
         ac.register(AppConfig.class);
         //基于java代码方式初始化DispatcherServlet
         DispatcherServlet servlet = new DispatcherServlet(ac);
-        ServletRegistration.Dynamic registration = servletContext.addServlet("/", servlet);
+        ServletRegistration.Dynamic registration = servletContext.addServlet("app", servlet);
         if (registration == null) return;
         registration.setLoadOnStartup(1);
         registration.addMapping("/*");

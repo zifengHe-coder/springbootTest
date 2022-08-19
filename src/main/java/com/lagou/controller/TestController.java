@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
  * @create 2022/8/19 17:17
  */
 @RestController
+@RequestMapping("/app")
 public class TestController {
-    @RequestMapping("/test/hello")
+    @RequestMapping("/test")
     public String test() {
         System.out.println("---hello---");
         return "hello";
